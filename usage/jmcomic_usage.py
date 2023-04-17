@@ -8,7 +8,7 @@ jm_option = create_option(
 @timeit('下载本子集: ')
 def download_jm_album():
     ls = str_to_list('''
-    JM435413
+    JM195818
 
 
     ''')
@@ -20,7 +20,7 @@ def download_jm_album():
 @timeit('获取实体类: ')
 def get_album_photo_detail():
     client = jm_option.build_jm_client()
-    album: JmAlbumDetail = client.get_album_detail('427413')
+    album: JmAlbumDetail = client.get_album_detail('195818')
 
     def show(p):
         p: JmPhotoDetail = client.get_photo_detail(p.photo_id)
